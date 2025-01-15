@@ -1,143 +1,93 @@
-/* Navbar */
-.navbar {
-    margin-bottom: 0;
-    padding: 10px 20px; /* Reduce padding to minimize space */
-}
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 50px; /* Reduce vertical padding */
-    background-color: #f8f9fa;
-    height: calc(100vh - 100px); /* Adjust height to fit reduced spacing */
-    margin-top: 0; /* Remove negative margin */
-}
-
-/* Hero Content */
-.hero-content {
-    text-align: center; /* Center align text */
-    margin: 0 auto; /* Center horizontally */
-    max-width: 60%;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 15px; /* Reduce margin for tighter spacing */
-    line-height: 1.2;
-}
-
-.hero-content .highlight {
-    color: hsl(134, 61%, 41%);
-}
-
-.hero-content p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px; /* Reduce margin for tighter spacing */
-}
-
-.view-services-btn {
-    padding: 10px 20px;
-    background-color: hsl(134, 61%, 41%);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 15px; /* Reduce space above the button */
-}
-
-.view-services-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Hero Image */
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-.hero-image {
-    display: none; /* Hide image to fully center content */
-}
-
 /* General Reset */
 body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Hero Section (Best Wash and Iron service) */
-  .hero-section {
-    padding: 20px; /* Adjust as needed */
-    text-align: center;
-    background-color: #f8f9fa;
-    margin-bottom: 0; /* Remove bottom margin */
-  }
-  
-  /* View Services Button */
-  .hero-section .view-services-button {
-    margin-top: 20px;
-  }
-  
-  /* Services Section (Our Services) */
-  .services {
-    padding: 20px;
-    margin-top: 0; /* Remove top margin */
-    text-align: center;
-    background-color: #f8f9fa;
-  }
-  
-  /* Services Heading */
-  .services-heading {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-  }
-  
-  /* Services Grid */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 20px 10px; /* Reduced padding */
+  background-color: #f8f9fa;
+}
+
+.services-heading {
+  font-size: 1.2rem; /* Smaller font size for heading */
+  color: #2c3e50;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+/* Services Grid */
+.services-grid {
+  display: flex; /* Horizontal alignment */
+  flex-direction: row;
+  gap: 15px; /* Reduced gap between cards */
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap cards for responsiveness */
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Slightly smaller border radius */
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 250px; /* Reduced width */
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Content */
+.service-image {
+  width: 100%;
+  height: 150px; /* Reduced image height */
+  object-fit: cover;
+}
+
+.service-title {
+  font-size: 1.2rem; /* Reduced title font size */
+  margin: 8px 0;
+}
+
+.service-description {
+  font-size: 0.9rem; /* Reduced font size */
+  color: #666;
+  padding: 0 10px; /* Reduced padding */
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+/* Service Button */
+.service-button {
+  padding: 8px 15px; /* Smaller button */
+  background-color: hsl(134, 61%, 41%);
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* Slightly smaller border radius */
+  font-size: 0.9rem; /* Reduced font size */
+  cursor: pointer;
+  margin-bottom: 15px; /* Reduced margin */
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: hsl(134, 61%, 35%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    flex-direction: column; /* Stack cards vertically on smaller screens */
   }
-  
-  /* Service Card */
   .service-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%; /* Almost full-width for smaller screens */
+    margin: 0 auto; /* Center align the cards */
   }
-  
-  /* Service Card Hover Effect */
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Service Button */
-  .service-button {
-    padding: 10px 20px;
-    background-color: hsl(134, 61%, 41%);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .service-button:hover {
-    background-color: hsl(134, 61%, 35%);
-  }
-  
+}

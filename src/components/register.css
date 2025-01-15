@@ -1,0 +1,102 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the page uses full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Allow elements to stack vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    background-color: #f7f7f7; /* Same background as navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Register Form Styling */
+.register {
+    width: 320px; /* Slightly wider than before */
+    background: #fff;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); /* Same shadow as navbar */
+    border-radius: 8px;
+    padding: 1.5rem; /* Same padding as login */
+    text-align: center;
+    margin-top: 120px; /* Adding space from top to avoid overlap with navbar */
+}
+
+/* Input Fields */
+.register > input {
+    border-radius: 8px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    font-size: 1rem; /* Slightly larger font size for readability */
+    transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Input focus effect */
+.register > input:focus {
+    border-color: #28a745; /* Green focus border */
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2); /* Green shadow on focus */
+}
+
+/* Button Styling */
+.register > .button {
+    background: #28a745; /* Green background */
+    border: 1px solid #28a745;
+    color: #fff;
+    font-size: 1rem; /* Slightly smaller font size */
+    padding: 0.75rem;
+    margin: 1rem 0; /* More margin to separate inputs */
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    width: 100%; /* Full width button */
+    transition: all 0.3s ease; /* Smooth transition for hover and active states */
+}
+
+/* Button hover effect */
+.register > .button:hover {
+    background: #218838; /* Darker green on hover */
+}
+
+/* Button active effect */
+.register > .button:active {
+    background: #1e7e34; /* Even darker green on click */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .register {
+        width: 80%; /* Make register form take more space on small screens */
+        padding: 1rem;
+    }
+
+    .register > .button {
+        font-size: 1.1rem;
+    }
+}
